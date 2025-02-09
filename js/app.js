@@ -3701,7 +3701,7 @@
     document.addEventListener("DOMContentLoaded", (function() {
         const applyActiveClass = (selector, activeClass) => {
             const menuLinks = document.querySelectorAll(".menu__link");
-            const currentPath = window.location.pathname;
+            const currentPath = window.location.pathname.split("/").pop();
             console.log(currentPath);
             menuLinks.forEach((link => {
                 if (link.getAttribute("href") === currentPath) link.classList.add(...activeClass); else link.classList.remove(...activeClass);
