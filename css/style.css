@@ -228,6 +228,7 @@ body {
   flex: 0 0 clamp(56px,56px + 24*(100vw - 768px)/672,80px);
   width: clamp(56px,56px + 24*(100vw - 768px)/672,80px);
   height: clamp(56px,56px + 24*(100vw - 768px)/672,80px);
+  aspect-ratio: 1/1;
   border: 1px solid rgba(255,255,255,.25);
   transition: all .3s ease 0s
 }
