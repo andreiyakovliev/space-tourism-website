@@ -6,13 +6,20 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250209215158">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250210204134">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+	<div class="animation" id="animationContainer" style="display: none;">
+		<p id="animationCountdownBlock" class="button text__title text__title--main">
+			<span id="animationCountdown">
+
+			</span>
+		</p>
+	</div>
 	<header class="header header__main">
 		<div class="header__content">
 			<a href="" class="header__logo"><img src="img/logo/logo.svg" alt="logo"></a>
@@ -49,7 +56,7 @@
 			</div>
 		</div>
 	</header>
-	<main class="page">
+	<main class="page" id="main">
 		<section class="page__home home-page" id="home">
 			<div class="home-page__container">
 				<div class="home-page__block">
@@ -67,7 +74,7 @@
 							</p>
 						</div>
 						<div class="home-page__button text text__title text__title--small">
-							<a href="" class="button">
+							<a id="starbutton" class="button">
 								<span>
 									explore
 								</span>
@@ -76,10 +83,10 @@
 					</div>
 				</div>
 			</div>
+
 		</section>
 	</main>
-	</div>
-	<script src="js/app.min.js?_v=20250209215158"></script>
+	<script src="js/app.min.js?_v=20250210204134"></script>
 </body>
 
 </html>
