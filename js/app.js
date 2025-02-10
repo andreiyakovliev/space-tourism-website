@@ -23714,7 +23714,7 @@
         }
         starGeo.setAttribute("position", new BufferAttribute(starVertices, 3));
         starGeo.setAttribute("velocity", new BufferAttribute(velocities, 1));
-        let sprite = (new TextureLoader).load("img/animation/star.png");
+        let sprite = (new TextureLoader).load("img/animation/star.webp");
         let starMaterial = new PointsMaterial({
             color: 11184810,
             size: .7,
