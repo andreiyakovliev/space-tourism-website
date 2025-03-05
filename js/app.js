@@ -219,6 +219,10 @@
             }
         }));
     }
+    function functions_menuClose() {
+        bodyUnlock();
+        document.documentElement.classList.remove("menu-open");
+    }
     function functions_FLS(message) {
         setTimeout((() => {
             if (window.FLS) console.log(message);
@@ -23761,6 +23765,11 @@
         setTimeout((function() {
             window.location.href = "destination.html";
         }), 3e3);
+    }));
+    document.addEventListener("click", (function(event) {
+        const menuBody = document.querySelector(".menu__body").contains(event.target);
+        const isMenuIcon = event.target.closest(".icon-menu");
+        if (!menuBody && !isMenuIcon) functions_menuClose();
     }));
     window["FLS"] = true;
     menuInit();

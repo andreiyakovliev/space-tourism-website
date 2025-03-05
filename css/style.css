@@ -149,8 +149,11 @@ body {
   font-weight: 700;
   letter-spacing: .1092em
 }
+.menu__text {
+  width: 100%
+}
 .icon-menu {
-  display: none
+  visibility: hidden
 }
 ._tab-active,
 .active {
@@ -276,6 +279,9 @@ body {
 .ibg--contain {
   -o-object-fit: contain;
   object-fit: contain
+}
+.page section {
+  margin-top: -135px
 }
 .page__destination {
   position: relative;
@@ -422,7 +428,7 @@ body {
   }
 }
 .header__main {
-  position: absolute;
+  position: sticky;
   top: 0;
   right: 0;
   width: 100%;
@@ -1666,8 +1672,11 @@ button.swiper-pagination-bullet {
   .destination-page__block {
     padding-right: .0000000625rem
   }
-  .destination-page__title:not(:last-child) {
-    margin-bottom: 1.5rem
+  .destination-page .title-padding:not(:last-child) {
+    margin-bottom: 9.4375rem
+  }
+  .destination-page .title-padding:not(:last-child) {
+    padding-top: 3rem
   }
   .body-tabs__text::after {
     bottom: -2.5rem
@@ -1746,8 +1755,11 @@ button.swiper-pagination-bullet {
   .destination-page__block {
     padding-right: 1.5625rem
   }
-  .destination-page__title:not(:last-child) {
-    margin-bottom: 9.4375rem
+  .destination-page .title-padding:not(:last-child) {
+    margin-bottom: 4.375rem
+  }
+  .destination-page .title-padding:not(:last-child) {
+    padding-top: 2.5rem
   }
   .body-tabs__text::after {
     bottom: -1.5rem
@@ -1888,13 +1900,15 @@ button.swiper-pagination-bullet {
     align-self: flex-start;
     justify-content: center;
     flex-direction: column;
-    row-gap: 32px
+    row-gap: 16px
   }
   .menu__link {
+    padding: 8px;
     width: 100%;
     justify-content: stretch
   }
   .icon-menu {
+    visibility: visible;
     display: block;
     position: relative;
     width: 1.875rem;
@@ -2149,8 +2163,11 @@ button.swiper-pagination-bullet {
   .destination-page__block {
     padding-right: clamp(.0000000625rem ,3.3482142143rem + -3.7202379464vw ,1.5625rem)
   }
-  .destination-page__title:not(:last-child) {
-    margin-bottom: clamp(1.5rem ,18.5089285714rem + -18.8988095238vw ,9.4375rem)
+  .destination-page .title-padding:not(:last-child) {
+    margin-bottom: clamp(4.375rem ,-1.4107142857rem + 12.0535714286vw ,9.4375rem)
+  }
+  .destination-page .title-padding:not(:last-child) {
+    padding-top: clamp(2.5rem ,1.9285714286rem + 1.1904761905vw ,3rem)
   }
   .body-tabs__text::after {
     bottom: clamp(-2.5rem ,-.3571428571rem + -2.380952381vw ,-1.5rem)
@@ -2209,6 +2226,12 @@ button.swiper-pagination-bullet {
   }
   .destination-page__block {
     padding-right: clamp(.5625rem ,-.3916984733rem + 4.0712468193vw ,1.5625rem)
+  }
+  .destination-page .title-padding:not(:last-child) {
+    margin-bottom: clamp(3.125rem ,1.9322519084rem + 5.0890585242vw ,4.375rem)
+  }
+  .destination-page .title-padding:not(:last-child) {
+    padding-top: clamp(1.5rem ,.5458015267rem + 4.0712468193vw ,2.5rem)
   }
   .crew-page__block {
     padding-top: clamp(7rem ,5.5687022901rem + 6.106870229vw ,8.5rem)
