@@ -165,3 +165,16 @@ if (starbutton) {
    })
 }
 
+//=============== Close menu ===============//
+
+import { menuClose } from './functions.js';
+
+
+document.addEventListener('click', function (event) {
+   const menuBody = document.querySelector('.menu__body').contains(event.target);
+   const isMenuIcon = event.target.closest('.icon-menu');
+
+   if (!menuBody && !isMenuIcon) {
+      menuClose();
+   }
+})
