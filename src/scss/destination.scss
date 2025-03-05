@@ -25,15 +25,19 @@
       align-items: center;
       column-gap: 1.5rem;
 
+
+
+      @media (max-width:$mobile) {
+         justify-content: center;
+      }
+   }
+
+   .title-padding {
       &:not(:last-child) {
          @include adaptiveValue("margin-bottom", 151, 70, 0, 1440, 768);
          @include adaptiveValue("margin-bottom", 70, 50, 1, 768, 375);
          @include adaptiveValue("padding-top", 48, 40, 0, 1440, 768);
          @include adaptiveValue("padding-top", 40, 24, 1, 768, 375);
-      }
-
-      @media (max-width:$mobile) {
-         justify-content: center;
       }
    }
 
