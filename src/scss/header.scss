@@ -1,0 +1,48 @@
+.header {
+
+   // .header__main
+   &__main {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+
+      z-index: 100;
+   }
+
+   // .header__content 
+
+   &__content {
+      // position: relative;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 0;
+      @include adaptiveValue("padding-top", 40, 0, 0, 1440, 768);
+      @include adaptiveValue("padding-left", 64, 40, 0, 1440, 768);
+
+      @media (min-width: 89.9988rem) {
+         max-width: 90rem;
+      }
+
+
+      @media (max-width: $mobile) {
+         padding: 1.5rem;
+      }
+   }
+
+   // .header__logo
+
+   &__logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+         @include adaptiveValue("width", 48, 40, 0, 768, 375);
+      }
+   }
+
+   // .header__menu
+
+   &__menu {}
+}

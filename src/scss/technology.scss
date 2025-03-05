@@ -1,0 +1,139 @@
+.technology-page {
+   // .technology-page__container
+
+   &__container {
+      display: flex;
+      flex-direction: column;
+      object-fit: cover;
+   }
+
+   // .technology-page__block
+
+   &__block {
+      height: 100%;
+      @include adaptiveValue("padding-top", 184, 136, 0, 1440, 768);
+      @include adaptiveValue("padding-button", 48, 40, 0, 1440, 768);
+      @include adaptiveValue("padding-left", 0, 9);
+      @include adaptiveValue("padding-right", 0, 9);
+
+      @include adaptiveValue("padding-top", 136, 112, 0, 768, 375);
+      @include adaptiveValue("padding-bottom", 40, 24, 0, 768, 375);
+      @include adaptiveValue("padding-left", 109, 9, 1, 768, 375);
+      @include adaptiveValue("padding-right", 109, 9, 1, 768, 375);
+   }
+
+   // .technology-page__title
+
+   &__title {
+      display: flex;
+      column-gap: 1.5rem;
+      width: 100%;
+
+      @media (max-width:$mobile) {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+   }
+
+   // .technology-page__count
+
+   &__count {
+      opacity: 0.25;
+   }
+
+   // .technology-page__text
+
+   &__text {}
+
+   // .technology-page__content
+
+   &__content {
+      display: flex;
+      justify-content: center;
+      column-gap: 2rem;
+      flex-grow: 1;
+
+      @include adaptiveValue("padding-top", 48, 40, 0, 1440, 768);
+
+      @media (max-width:$mobile) {
+         flex-direction: column;
+         column-gap: 0;
+      }
+   }
+
+   // .technology-page__tabs
+
+   &__tabs {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: toRem(64);
+
+      @media (max-width:$mobile) {
+         flex-direction: column-reverse;
+         column-gap: 0;
+      }
+   }
+
+   // .technology-page__navigation
+
+   &__navigation {
+      @media (max-width:$mobile) {
+         display: flex;
+         justify-content: center;
+         // align-items: center;
+         flex-direction: row;
+      }
+   }
+
+   // .technology-page__body
+
+   &__body {}
+
+   // .technology-page__body-block
+
+   &__body-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: toRem(32);
+
+      @media (max-width:$mobile) {
+         flex-direction: column;
+         column-gap: 0;
+      }
+   }
+
+   // .technology-page__tabs-content
+
+   &__tabs-content {
+      flex: 1 1 50.83%;
+
+
+   }
+
+   // .technology-page__image
+
+   &__image {
+      flex: 1 1 62.94%;
+      overflow: hidden;
+      width: 100%;
+
+      img {
+         display: block;
+         width: 100%;
+         object-fit: cover;
+         object-position: center;
+
+         @include adaptiveValue("height", 600, 357);
+
+
+
+         @media (max-width:$mobile) {
+            @include adaptiveValue("height", 357, 258);
+
+         }
+      }
+   }
+}

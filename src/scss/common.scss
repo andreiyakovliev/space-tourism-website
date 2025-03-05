@@ -1,0 +1,384 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.destination {}
+
+.page {
+
+   // .page__destination
+
+   &__destination {
+      position: relative;
+      z-index: 0;
+      background: url('@img/bg/bg-space.svg') no-repeat center center/cover;
+      min-height: 100vh;
+   }
+
+   // .page__crew
+
+   &__crew {
+      position: relative;
+      z-index: 0;
+      background: url('@img/bg/bg-moon.svg') no-repeat center center/cover;
+      min-height: 100vh;
+   }
+
+   // .page__technology
+
+   &__technology {
+      position: relative;
+      z-index: 0;
+      background: url('@img/bg/bg-circle__stars.svg') no-repeat center center/cover;
+      min-height: 100vh;
+   }
+
+}
+
+//=============== Text ===============//
+
+.text {
+
+   text-align: left;
+
+   // .text__title
+
+   &__title {
+      font-family: "Bellefair";
+      text-transform: uppercase;
+
+      // .text__title--main
+
+      &--main {
+         /* desktop/text-preset-1 */
+
+         // font-size: 144px;
+         // tablet: 144px
+         // mobile: 80px
+         font-size: clamp(5rem, calc(9rem - (144 - 80) * ((48rem - min(100vw, 48rem)) / (768 - 375))), 9rem);
+
+         // line-height: 165px;
+         // tablet: 165px
+         // mobile: 92px
+         line-height: clamp(5.75rem, calc(10.3125rem - (165 - 92) * ((48rem - min(100vw, 48rem)) / (768 - 375))), 10.3125rem);
+
+         @media (max-width: toEm(849.98)) {
+            text-align: center;
+         }
+
+         // tablet: text-align: center;
+         // mobile: text-align: center;
+      }
+
+      // .text__title--big
+
+      &--big {
+         /* desktop/text-preset-2 */
+
+         // font-size: 96px;
+         // tablet: 80px
+         // mobile: 56px
+         font-size: clamp(5rem, calc(5rem + (96 - 80) * ((100vw - 48rem) / (1440 - 768))), 6rem);
+
+         // line-height: 110px;
+         // tablet: 92px
+         // mobile: 64px
+         line-height: clamp(5.75rem, calc(5.75rem + (110 - 92) * ((100vw - 48rem) / (1440 - 768))), 6.875rem);
+
+         // tablet: text-align: center;
+         // mobile: text-align: center;
+
+         @media (max-width:$mobile) {
+            font-size: clamp(3.5rem, calc(3.5rem + (80 - 56) * ((100vw - 23.4375rem) / (768 - 375))), 5rem);
+            line-height: clamp(4rem, calc(4rem + (92 - 64) * ((100vw - 48rem) / (1440 - 768))), 5.75rem);
+
+         }
+
+         @media (max-width: toEm(849.98)) {
+            text-align: center;
+         }
+      }
+
+      // .text__title--middle
+
+      &--middle {
+         /* desktop/text-preset-3 */
+
+         // font-size: 56px;
+         // tablet: 40px
+         // mobile: 24px
+         font-size: clamp(2.5rem, calc(2.5rem + (56 - 40) * ((100vw - 48rem) / (1440 - 768))), 3.5rem);
+
+
+         line-height: 4rem;
+         // tablet: 46px
+         // mobile: 28px
+         line-height: clamp(2.875rem, calc(2.875rem + (64 - 46) * ((100vw - 48rem) / (1440 - 768))), 4rem);
+
+         // tablet: text-align: center;
+         // mobile: text-align: center;
+
+         @media (max-width:$mobile) {
+            font-size: clamp(1.5rem, calc(1.5rem + (40 - 24) * ((100vw - 23.4375rem) / (768 - 375))), 2.5rem);
+            line-height: clamp(1.75rem, calc(1.75rem + (46 - 28) * ((100vw - 23.4375rem) / (768 - 375))), 2.875rem);
+
+         }
+
+         @media (max-width: toEm(849.98)) {
+            text-align: center;
+         }
+      }
+
+      // .text__title--small
+
+      &--small {
+         /* desktop/text-preset-4 */
+         // font-size: 32px;
+         // tablet: 24px
+         // mobile: 18px
+         font-size: clamp(1.5rem, calc(1.5rem + (32 - 24) * ((100vw - 48rem) / (1440 - 768))), 2rem);
+
+         // line-height: 37px;
+         // tablet: 28px
+         // mobile: 21px
+         line-height: clamp(1.75rem, calc(1.75rem + (37 - 28) * ((100vw - 23.4375rem) / (768 - 375))), 2.3125rem);
+
+         // tablet: text-align: center;
+         // mobile: text-align: center;
+
+         @media (max-width:$mobile) {
+            font-size: clamp(1.125rem, calc(1.125rem + (24 - 18) * ((100vw - 23.4375rem) / (768 - 375))), 1.5rem);
+            line-height: clamp(1.3125rem, calc(1.3125rem + (28 - 21) * ((100vw - 23.4375rem) / (768 - 375))), 1.75rem);
+
+         }
+
+         @media (max-width: toEm(849.98)) {
+            text-align: center;
+         }
+      }
+
+      // .text__title--thin
+
+      &--thin {
+         /* desktop/text-preset-6 */
+         font-size: 1.75rem;
+         // tablet: 28px
+         // mobile: 28px
+
+         line-height: 2rem;
+         // tablet: 32px
+         // mobile: 32px
+
+         // tablet: text-align: center;
+         // mobile: text-align: center;
+
+         @media (max-width: toEm(849.98)) {
+            text-align: center;
+         }
+      }
+   }
+
+
+
+   // .text__subtitle
+
+   &__subtitle {
+      font-family: "Barlow Condensed";
+      text-transform: uppercase;
+
+      // .text__subtitle--big
+
+      &--big {
+         /* desktop/text-preset-5 */
+         color: $lightBlueColor;
+
+         // font-size: 28px;
+         // tablet: 20px
+         // mobile: 16px
+         font-size:
+            clamp(1.25rem, calc(1.25rem + (28 - 20) * ((100vw - 48rem) / (1440 - 768))), 1.75rem);
+
+         // line-height: 34px;
+         // tablet: 24px
+         // mobile: 19px
+         line-height: clamp(1.5rem, calc(1.5rem + (34 - 24) * ((100vw - 48rem) / (1440 - 768))), 2.125rem);
+
+         // letter-spacing: 4px;
+         // tablet: 3px
+         // mobile: 3px
+         letter-spacing: clamp(0.1875rem, calc(0.25rem - (4 - 3) * ((100vw - 48rem) / (1440 - 768))), 0.25rem);
+
+         @media (max-width:$mobile) {
+            font-size: clamp(1rem, calc(1rem + (20 - 16) * ((100vw - 23.4375rem) / (768 - 375))), 1.25rem);
+            line-height: clamp(1.1875rem, calc(1.1875rem + (24 - 19) * ((100vw - 23.4375rem) / (768 - 375))), 1.5rem);
+         }
+
+         @media (max-width: toEm(849.98)) {
+            text-align: center;
+         }
+      }
+
+      // .text__subtitle--middle
+
+      &--middle {
+         /* desktop/text-preset-7 */
+         line-height: 1.0625rem;
+         letter-spacing: 0.125rem;
+
+         // tablet: text-align: center;
+         // mobile: text-align: center;
+
+         @media (max-width: toEm(849.98)) {
+            text-align: center;
+         }
+      }
+
+      // .text__subtitle--small
+
+      &--small {
+         /* desktop/text-preset-8 */
+
+         // font-size: 16px;
+         // tablet: 16px
+         // mobile: 14px
+         font-size: clamp(0.875rem, calc(0.875rem + (16 - 14) * ((100vw - 23.4375rem) / (768 - 375))), 1rem);
+
+
+
+         // line-height: 19px;
+         // tablet: 19px
+         // mobile: 17px
+         line-height: clamp(1.0625rem, calc(1.0625rem + (19 - 17) * ((100vw - 23.4375rem) / (768 - 375))), 1.1875rem);
+
+         // letter-spacing: 2px;
+         letter-spacing: 0.1086em;
+
+
+         // tablet: 2px
+         // mobile: 2px
+
+         &_blue {
+            color: $lightBlueColor;
+         }
+      }
+   }
+
+   // .text__description
+
+   &__description {
+      /* desktop/text-preset-9 */
+      font-family: "Barlow";
+      color: $lightBlueColor;
+
+      // font-size: 1.125rem;
+      // tablet: 1rem
+      // mobile: 0.9375rem
+
+
+      // line-height: 2.025rem;
+      // tablet: 1.8rem
+      // mobile: 1.6875rem
+
+      // tablet: text-align: center;
+      // mobile: text-align: center;
+      @include adaptiveValue("font-size", 18, 16, 0, 1440, 767);
+      @include adaptiveValue("font-size", 16, 15, 0, 768, 375);
+
+      @include adaptiveValue("line-height", 32.4, 28.8, 0, 1440, 768);
+      @include adaptiveValue("line-height", 28.8, 27, 0, 768, 375);
+
+      @media (max-width: toEm(849.98)) {
+         text-align: center;
+      }
+   }
+}
+
+//=============== Button ===============//
+
+/* Display Button States - Desktop and Tablet */
+
+.button {
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   flex-grow: 0;
+   flex-shrink: 0;
+   cursor: pointer;
+
+   transition: all 0.3s ease 0s;
+
+   @include adaptiveValue("height", 272, 144, 2, 767.98, 374.98);
+   @include adaptiveValue("width", 272, 144, 2, 767.98, 374.98);
+   @include adaptiveValue("flex-basis", 272, 144, 2, 767.98, 374.98);
+
+   span {
+      color: $blueColor;
+      position: absolute;
+      z-index: 3;
+   }
+
+   &::before {
+      content: "";
+      position: absolute;
+      background: $mainColor;
+      flex-grow: 0;
+      flex-shrink: 0;
+      border-radius: 50%;
+      transition: background-color 0.3s ease 0s, transform 0.3s ease 0s;
+      z-index: 1;
+      box-shadow: 0rem -0.3125rem 0.9375rem 0rem $lightBlueColor, 0rem 0.3125rem 0.625rem 0rem transparent;
+      animation: spinning 3.7s linear infinite;
+
+      @include adaptiveValue("height", 272, 144, 2, 767.98, 374.98);
+      @include adaptiveValue("width", 272, 144, 2, 767.98, 374.98);
+      @include adaptiveValue("flex-basis", 272, 144, 2, 767.98, 374.98);
+   }
+
+   @media (any-hover: hover) {
+      &:hover::after {
+         content: "";
+         position: absolute;
+         flex: 0 0 clamp(20rem, calc(20rem + (448 - 320) * ((100vw - 23.4375rem) / (768 - 375))), 28rem);
+         width: clamp(20rem, calc(20rem + (448 - 320) * ((100vw - 23.4375rem) / (768 - 375))), 28rem);
+         height: clamp(20rem, calc(20rem + (448 - 320) * ((100vw - 23.4375rem) / (768 - 375))), 28rem);
+         border-radius: 50%;
+         background: $mainColor;
+         opacity: 0.5;
+         animation: pulsate infinite 3s;
+      }
+
+      &:hover span {
+         opacity: 0.5
+      }
+   }
+
+   @keyframes pulsate {
+      0% {
+         transform: scale(0.6);
+         opacity: 0;
+      }
+
+      50% {
+         opacity: 1;
+      }
+
+      100% {
+         transform: scale(1);
+         opacity: 0;
+      }
+   }
+
+   @keyframes spinning {
+      to {
+         transform: rotate(360deg);
+      }
+   }
+}
+
+//=============== Swipper ===============//
+
+.swiper-pagination {
+   @media (max-width:$tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+}
